@@ -1,0 +1,16 @@
+my_secret:
+  MYSQL_ROOT_PASSWORD: VGVzdEAxMjM=
+  MYSQL_DATABASE: YmFua2FwcGRi
+
+my_pvc:
+  storageClassName: disk.csi.azure.com
+
+my_sql:
+  image: mysql:8.0
+  port: 3306
+
+my_app:
+  image: adijaiswal/bankapp:latest
+  port: 8080
+
+replicas: 2
